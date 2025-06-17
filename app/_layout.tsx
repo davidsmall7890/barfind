@@ -10,16 +10,16 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack initialRouteName="splash" screenOptions={{ headerShown: false }}>
-        {/* 1) Splash */}
+        {/* 1) Splash Screen */}
         <Stack.Screen name="splash" />
         {/* 2) Welcome */}
         <Stack.Screen name="welcome" />
         {/* 3) Auth */}
         <Stack.Screen name="auth/signin" />
         <Stack.Screen name="auth/signup" />
-        {/* 4) Main Tabs Group */}
+        {/* 4) Main tab navigator — loads app/(tabs)/_layout.tsx */}
         <Stack.Screen name="(tabs)" />
-        {/* 5) 404 */}
+        {/* 5) Fallback */}
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
