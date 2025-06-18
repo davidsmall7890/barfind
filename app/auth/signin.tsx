@@ -2,7 +2,7 @@ import { useRouter } from 'expo-router';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
-import { auth } from '../../src/services/firebase';
+import { auth } from '../../services/firebase';
 
 export default function SignInScreen() {
   const router = useRouter();
