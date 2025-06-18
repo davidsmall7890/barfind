@@ -1,10 +1,13 @@
 // app/auth/signup.tsx
 import { useRouter } from 'expo-router';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
-import { auth, firestore } from '../../services/firebase';
+import { firestore } from '../../services/firebase';
+
+// Get the correct Auth instance
+const auth = getAuth();
 
 export default function SignUpScreen() {
   const router = useRouter();
